@@ -22,6 +22,7 @@ Write-Output("Merging files from $mergeFrom to $mergeTo...")
 foreach($item in (Get-ChildItem $mergeFrom))
 {
     $fileFullPath = $item.FullName
+	Write-Output($fileFullPath)
 
     Copy-Item -Path $fileFullPath -Destination $mergeTo -Force -Recurse
 }
