@@ -1,0 +1,10 @@
+@ShutdownOnFailedCommand 1
+@NoPromptForPassword 1
+
+force_install_dir .\APP_NAME
+
+login anonymous
+
+app_update APP_ID validate
+
+quit
