@@ -1,10 +1,9 @@
 @ShutdownOnFailedCommand 1
 @NoPromptForPassword 1
 
-force_install_dir .\APP_NAME
-
 login anonymous
 
+force_install_dir .\APP_NAME
 app_update APP_ID validate
 
 quit

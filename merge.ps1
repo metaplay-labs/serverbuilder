@@ -14,6 +14,14 @@ if(-not(Test-Path(".\merge")))
     Exit
 }
 
-(Get-ChildItem(".\merge\*")).FullName |
-    ForEach-Object({ Join-Path($_, "*") }) |
-        Copy-Item ".\$appName" -Recurse
+$mergeFrom = ".\merge\"
+$mergeTo = ".\$appName\"
+
+Write-Output("Merging files from $mergeFrom to $mergeTo...")
+
+foreach($item in (Get-ChildItem $mergeFrom))
+{
+    $fileFullPath = $item.FullName
+
+    Copy-Item -Path $fileFullPath -Destination $mergeTo -Force -Recurse
+}
