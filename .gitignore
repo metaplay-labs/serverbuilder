@@ -1,0 +1,12 @@
+*
+
+!.gitignore
+
+!build.ps1
+!update.ps1
+!merge.ps1
+!steam_script.txt
+
+!/merge/
+!/merge/*
+!/merge/**
